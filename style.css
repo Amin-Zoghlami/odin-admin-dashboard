@@ -3,24 +3,96 @@
     margin: 0;
 }
 
+html,
+body {
+    height: 100%;
+    font-family: "Oswald", sans-serif;
+}
+
 li {
     list-style-type: none;
 }
 
+svg {
+    height: 25px;
+    width: 25px;
+    fill: #FFFFFF;
+}
+
 .container {
+    height: 100%;
     display: grid;
     grid-template: 1fr 4fr / 1fr 4fr;
 }
 
 .sidebar {
+    background-color: #be123c;
+    color: #FFFFFF;
     grid-row: 1 / -1;
+}
+
+.sidebar .logo {
+    display: flex;
+    align-items: center;
+}
+
+.sidebar .logo .icon {
+    height: 50px;
+    width: 50px;
+}
+
+.sidebar .nav li {
+    display: flex;
+    align-items: center;
+}
+
+.header .find {
+    display: flex;
+    align-items: center;
+}
+
+.header .find .icon {
+    fill: #000000;
+}
+
+.header .action {
+    display: flex;
+    align-items: center;
 }
 
 .main {
+    background-color: #d3d3d3;
     display: grid;
-    grid-template: 1fr 1fr / 1fr 1fr
+    grid-template: 1fr 1fr / 1fr 1fr;
+    gap: 15px;
+}
+
+.main-projects {
+    grid-row: 1 / -1;
 }
 
 .projects {
-    grid-row: 1 / -1;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 10px;
+}
+
+.projects .card {
+    background-color: #FFFFFF;
+}
+
+.announcements {
+    display: grid;
+}
+
+.announcement {
+    background-color: #FFFFFF;
+}
+
+.trending {
+    display: grid;
+}
+
+.user {
+    background-color: #FFFFFF;
 }
