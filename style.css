@@ -1,6 +1,7 @@
 * {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 
 html,
@@ -16,7 +17,16 @@ li {
 svg {
     height: 25px;
     width: 25px;
-    fill: #FFFFFF;
+    fill: #ffffff;
+}
+
+button {
+    background-color: #be123c;
+    color: #ffffff;
+    border: none;
+    border-radius: 20px;
+    height: 40px;
+    width: 90px;
 }
 
 .container {
@@ -27,11 +37,12 @@ svg {
 
 .sidebar {
     background-color: #be123c;
-    color: #FFFFFF;
+    color: #ffffff;
     grid-row: 1 / -1;
 }
 
 .sidebar .logo {
+    
     display: flex;
     align-items: center;
 }
@@ -39,6 +50,7 @@ svg {
 .sidebar .logo .icon {
     height: 50px;
     width: 50px;
+    margin: 10px;
 }
 
 .sidebar .nav li {
@@ -46,18 +58,50 @@ svg {
     align-items: center;
 }
 
+.sidebar .nav li .icon {
+    margin: 10px;
+}
+
+.sidebar .nav .settings {
+    margin-top: 40px;
+}
+
 .header .find {
     display: flex;
+    justify-content: space-between;
     align-items: center;
+}
+.header .find .search {
+    display: flex;
 }
 
 .header .find .icon {
     fill: #000000;
 }
 
+.header .find .search-bar {
+    background-color: #d3d3d3;
+    height: 25px;
+    width: 600px;
+    border-radius: 15px;
+}
+
+
+.header .find .profile {
+    display: flex;
+}
+
 .header .action {
+    padding: 20px 100px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header .action .actions {
     display: flex;
     align-items: center;
+    gap: 30px;
 }
 
 .main {
@@ -65,6 +109,7 @@ svg {
     display: grid;
     grid-template: 1fr 1fr / 1fr 1fr;
     gap: 15px;
+    place-items: center;
 }
 
 .main-projects {
@@ -78,7 +123,16 @@ svg {
 }
 
 .projects .card {
-    background-color: #FFFFFF;
+    background-color: #ffffff;
+}
+
+.projects .card .icons {
+    display: flex;
+    justify-content: end;
+}
+
+.projects .card .icons .icon {
+    fill: #000000;
 }
 
 .announcements {
@@ -86,7 +140,7 @@ svg {
 }
 
 .announcement {
-    background-color: #FFFFFF;
+    background-color: #ffffff;
 }
 
 .trending {
@@ -94,5 +148,5 @@ svg {
 }
 
 .user {
-    background-color: #FFFFFF;
+    background-color: #ffffff;
 }
